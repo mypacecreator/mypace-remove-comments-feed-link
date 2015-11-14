@@ -13,14 +13,6 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 This plugin will remove comments feed link from header, output only posts feed.
 
-= Official =
-
-
-= GitHub =
-
-https://github.com/mypacecreator/mypace-remove-comments-feed-link
-
-
 = Contributors =
 
 * [Kei Nomura](http://mypacecreator.net/) ( [mypacecreator](https://profiles.wordpress.org/mypacecreator/) )
@@ -36,10 +28,11 @@ Do you have questions or issues with mypace Custom SEO Metatag? Use these suppor
 
 1. [Twitter](https://twitter.com/mypacecreator)
 
-== Screenshots ==
-
-
 == Changelog ==
 
 = 1.0 =
 * Initial release.
+
+= GitHub =
+
+https://github.com/mypacecreator/mypace-remove-comments-feed-link
