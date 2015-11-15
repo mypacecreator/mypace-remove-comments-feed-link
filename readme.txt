@@ -13,14 +13,16 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 This plugin will remove comments feed link from header, output only posts feed.
 
-= Contributors =
-
-* [Kei Nomura](http://mypacecreator.net/) ( [mypacecreator](https://profiles.wordpress.org/mypacecreator/) )
 
 == Installation ==
 
 1. Upload `mypace Remove Comments Feed Link` to the `/wp-content/plugins/` directory
-1. Activate the plugin through the 'Plugins' menu in WordPress
+2. Activate the plugin through the 'Plugins' menu in WordPress
+
+== Screenshots ==
+
+1. Before activate this plugin.
+2. After activate this plugin.
 
 == Frequently Asked Questions ==
 
