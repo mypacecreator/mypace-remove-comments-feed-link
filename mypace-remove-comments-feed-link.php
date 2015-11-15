@@ -8,6 +8,26 @@ Version: 1.0
 Author URI: http://mypacecreator.net/
 */
 
+$wp_version = get_bloginfo( 'version' );
+
+if ( $wp_version >= '4.4' ) {
+
+	add_filter( 'feed_links_show_comments_feed', '__return_false' ); 
+
+} else { // if ( $wp_version < '4.3.x' )
+
+	if ( !function_exists( 'mypace_output_posts_feed' ) ){
+		remove_action( 'wp_head', 'feed_links' );
+
+		function mypace_output_posts_feed( ) {
+	?>
+	<link rel="alternate" type="<?php echo feed_content_type( 'rss2' ); ?>" title="<?php bloginfo( 'name' ); ?> &raquo; RSS 2.0 Feed" href="<?php bloginfo( 'rss2_url' ); ?>" />
+	<?php }
+		add_filter( 'wp_head','mypace_output_posts_feed' );
+	}
+
+}
+
 if( !function_exists( 'mypace_comments_feed_404' ) ){
 	function mypace_comments_feed_404( $object ) {
 		if ( $object->is_comment_feed ) {
@@ -19,16 +39,3 @@ if( !function_exists( 'mypace_comments_feed_404' ) ){
 	}
 	add_action( 'parse_query', 'mypace_comments_feed_404' );
 }
-
-if ( !function_exists( 'mypace_output_posts_feed' ) ){
-	remove_action('wp_head', 'feed_links', 2, 0);
-	remove_action('wp_head', 'feed_links_extra' ,3, 0);
-	function mypace_output_posts_feed( ) {
-?>
-<link rel="alternate" type="<?php echo feed_content_type( 'rss2' ); ?>" title="<?php bloginfo( 'name' ); ?> &raquo; RSS 2.0 Feed" href="<?php bloginfo( 'rss2_url' ); ?>" />
-<?php }
-	add_filter( 'wp_head','mypace_output_posts_feed' );
-}
-
-
-
