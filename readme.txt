@@ -3,7 +3,7 @@ Contributors: mypacecreator
 Donate link: http://www.amazon.co.jp/registry/wishlist/33HK9YOKDESUO
 Tags: comments, feed, rss
 Requires at least: 4.0
-Tested up to: 4.3.1
+Tested up to: 4.4
 Stable tag: 1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -24,11 +24,6 @@ This plugin will remove comments feed link from header, output only posts feed.
 1. Before activate this plugin.
 2. After activate this plugin.
 
-== Frequently Asked Questions ==
-
-Do you have questions or issues with mypace Custom SEO Metatag? Use these support channels appropriately.
-
-1. [Twitter](https://twitter.com/mypacecreator)
 
 == Changelog ==
 
