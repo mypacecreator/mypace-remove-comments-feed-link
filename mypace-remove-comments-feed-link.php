@@ -4,7 +4,7 @@ Plugin Name: mypace Remove Comments Feed Link
 Plugin URI: https://github.com/mypacecreator/mypace-remove-comments-feed-link
 Description: This plugin will remove comments feed link from header, output only posts feed.
 Author: Kei Nomura (mypacecreator)
-Version: 1.0
+Version: 1.1
 Author URI: http://mypacecreator.net/
 */
 
@@ -17,7 +17,7 @@ if ( $wp_version >= '4.4' ) {
 } else { // if ( $wp_version < '4.3.x' )
 
 	if ( !function_exists( 'mypace_output_posts_feed' ) ){
-		remove_action( 'wp_head', 'feed_links' );
+		remove_action( 'wp_head', 'feed_links', 2 );
 		function mypace_output_posts_feed( ) {
 	?>
 	<link rel="alternate" type="<?php echo feed_content_type( 'rss2' ); ?>" title="<?php bloginfo( 'name' ); ?> &raquo; RSS 2.0 Feed" href="<?php bloginfo( 'rss2_url' ); ?>" />
