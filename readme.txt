@@ -12,6 +12,11 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 == Description ==
 
 This plugin will remove comments feed link from header, output only posts feed.
+If someone tries to access the comments feed url, your server returns status code 404.
+
+= For Japanese User =
+このプラグインを有効化すると、head内に出力されるサイトコメントフィードや、記事へのコメントフィードのリンクを削除し、投稿フィードのみを出力します。
+もしコメントフィードのURLに直接アクセスされた場合は、ステータスコード404を返すようになります。
 
 
 == Installation ==
