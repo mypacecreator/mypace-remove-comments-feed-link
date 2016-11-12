@@ -48,7 +48,7 @@ if( !function_exists( 'mypace_comments_feed_404' ) ){
 }
 
 function mypace_load_textdomain() {
-	load_plugin_textdomain( 'mypace-remove-comments-feed-link', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' ); 
+	load_plugin_textdomain( 'mypace-remove-comments-feed-link' ); 
 }
 add_action( 'plugins_loaded', 'mypace_load_textdomain' );
 
