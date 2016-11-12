@@ -3,20 +3,15 @@ Contributors: mypacecreator
 Donate link: http://www.amazon.co.jp/registry/wishlist/33HK9YOKDESUO
 Tags: comments, feed, rss
 Requires at least: 4.0
-Tested up to: 4.4
-Stable tag: 1.1
+Tested up to: 4.6.1
+Stable tag: 1.1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 
 == Description ==
 
-This plugin will remove comments feed link from header, output only posts feed.
-If someone tries to access the comments feed url, your server returns status code 404.
-
-= For Japanese User =
-このプラグインを有効化すると、head内に出力されるサイトコメントフィードや、記事へのコメントフィードのリンクを削除し、投稿フィードのみを出力します。
-もしコメントフィードのURLに直接アクセスされた場合は、ステータスコード404を返すようになります。
+This plugin will remove comments feed links from header, output only posts feed. When someone tries to access the comments feed url, your server returns status code 404.
 
 
 == Installation ==
@@ -31,6 +26,9 @@ If someone tries to access the comments feed url, your server returns status cod
 
 
 == Changelog ==
+
+= 1.1.1 =
+* localization
 
 = 1.1 =
 * Bug fix. Specified the priority in the call to remove_action('wp_head', 'feed_links')

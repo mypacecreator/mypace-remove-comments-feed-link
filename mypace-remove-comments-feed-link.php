@@ -2,10 +2,12 @@
 /*
 Plugin Name: mypace Remove Comments Feed Link
 Plugin URI: https://github.com/mypacecreator/mypace-remove-comments-feed-link
-Description: This plugin will remove comments feed link from header, output only posts feed.
+Description: This plugin will remove comments feed links from header, output only posts feed. When someone tries to access the comments feed url, your server returns status code 404.
 Author: Kei Nomura (mypacecreator)
-Version: 1.1
+Version: 1.1.1
 Author URI: http://mypacecreator.net/
+Text Domain: mypace-remove-comments-feed-link
+Domain Path: /languages
 */
 
 $wp_version = get_bloginfo( 'version' );
@@ -44,3 +46,9 @@ if( !function_exists( 'mypace_comments_feed_404' ) ){
 	}
 	add_action( 'parse_query', 'mypace_comments_feed_404' );
 }
+
+function mypace_load_textdomain() {
+	load_plugin_textdomain( 'mypace-remove-comments-feed-link', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' ); 
+}
+add_action( 'plugins_loaded', 'mypace_load_textdomain' );
+
